@@ -20,7 +20,7 @@ class Program
         {
             var client = factory.CreateMqttClient();
             string clientid = $"mqtt-test-{i}";
-            var options = BuildClientOptions("20.252.23.62", 1883, "user1", "321", clientid);   
+            var options = BuildClientOptions("brokerIP", 1883, "user1", "321", clientid);   
 
             messageCounts[i] = 0;
 
@@ -57,14 +57,12 @@ class Program
     static IMqttClientOptions BuildClientOptions(string server, int port, string username, string password, string clientid)
     {
         return new MqttClientOptionsBuilder()
-            .WithTcpServer(server, port)
-            // .WithWebSocketServer("ws://20.252.23.62:9090/mqtt")
+            .WithWebSocketServer($"ws://{server}:{port}/mqtt")
             .WithCredentials(username, password)
             .WithClientId(clientid)
             .WithCleanSession(false)
             .WithSessionExpiryInterval(3600)
             .WithCommunicationTimeout(TimeSpan.FromSeconds(30))
-            // .WithKeepAlivePeriod(TimeSpan.FromSeconds(30))
             .WithProtocolVersion(MQTTnet.Formatter.MqttProtocolVersion.V311) //Protocol
             .Build();
     }
