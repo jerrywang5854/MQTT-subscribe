@@ -23,10 +23,11 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/jerrywang5854/MQTT-subscribe
 cd mqtt-client-example
+```
 
 ## Usage
 To run the program, use the following command from the root of the repository:
 
 ```bash
 dotnet run
-
+```
