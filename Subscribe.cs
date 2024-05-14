@@ -19,7 +19,7 @@ class Program
         {
             var client = factory.CreateMqttClient();
             string clientId = $"mqtt-test-{i}";
-            var options = BuildClientOptions("brokerIP", 9090, "username", "userpassword", clientId);
+            var options = BuildClientOptions("brokerIP", "port", "username", "userpassword", clientId);
             messageCounts[i] = 0;
 
             ILogger logger = CreateLogger(i);
