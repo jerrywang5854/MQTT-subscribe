@@ -9,17 +9,23 @@ using Serilog;
 
 class Program
 {
+    int clientCounts = 10;
+    str brokerIP = "yourbrokerIP";
+    str port = "yourport";
+    str username = "yourname";
+    str userpassword = "yourpassword";
+    
     static async Task Main(string[] args)
     {
         var factory = new MqttFactory();
         var clients = new List<IMqttClient>();
         var messageCounts = new Dictionary<int, int>();
 
-        for (int i = 0; i < 10; i++) // Create multiple clients
+        for (int i = 0; i < clientCounts; i++) // Create multiple clients
         {
             var client = factory.CreateMqttClient();
             string clientId = $"mqtt-test-{i}";
-            var options = BuildClientOptions("brokerIP", "port", "username", "userpassword", clientId);
+            var options = BuildClientOptions(brokerIP, port, username, userpassword, clientId);
             messageCounts[i] = 0;
 
             ILogger logger = CreateLogger(i);
