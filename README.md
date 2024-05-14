@@ -4,7 +4,7 @@ This repository contains a C# application demonstrating the use of multiple MQTT
 
 ## Features
 
-- Connect multiple MQTT clients to an MQTT broker.
+- Connect multiple MQTT clients to an MQTT broker using WebSocket.
 - Subscribe to specific topics.
 - Log messages received by each client separately.
 - Summarize the message count per client upon program termination.
@@ -26,6 +26,8 @@ cd mqtt-client-example
 ```
 
 ## Usage
+Before running the program, users must edit the Program.cs file to specify their own brokerIP, port, username, and userpassword in the BuildClientOptions method.
+
 To run the program, use the following command from the root of the repository:
 
 ```bash
