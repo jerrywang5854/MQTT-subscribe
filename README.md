@@ -1,4 +1,4 @@
-# MQTT Client Example
+# MQTT Subscribe Example
 
 This repository contains a C# application demonstrating the use of multiple MQTT clients to connect to an MQTT broker, subscribe to topics, and log messages received.
 
@@ -21,7 +21,12 @@ Before you begin, ensure you have met the following requirements:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/mqtt-client-example.git
+git clone https://github.com/jerrywang5854/MQTT-subscribe
 cd mqtt-client-example
 
-## 
+## Usage
+To run the program, use the following command from the root of the repository:
+
+```bash
+dotnet run
+
