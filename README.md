@@ -16,15 +16,6 @@ Before you begin, ensure you have met the following requirements:
 - MQTTnet library
 - Serilog library for logging
 
-## Installation
-
-Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/jerrywang5854/MQTT-subscribe
-cd mqtt-client-example
-```
-
 ## Usage
 Before running the program, users must edit the Subscribe.cs file to specify their own brokerIP, port, username, and userpassword in the BuildClientOptions method.
 
