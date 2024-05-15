@@ -26,7 +26,7 @@ cd mqtt-client-example
 ```
 
 ## Usage
-Before running the program, users must edit the Program.cs file to specify their own brokerIP, port, username, and userpassword in the BuildClientOptions method.
+Before running the program, users must edit the Subscribe.cs file to specify their own brokerIP, port, username, and userpassword in the BuildClientOptions method.
 
 To run the program, use the following command from the root of the repository:
 
